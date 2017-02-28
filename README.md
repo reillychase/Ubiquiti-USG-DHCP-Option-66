@@ -5,7 +5,7 @@ How to add DHCP option 66 to Ubiquiti USG
 <b>SUMMARY</b> In this example I am configuring Option 66 for 2 different VLANs aka LAN and VoIP. Option 66 will point to the DNS name of the PBX where the phones will download their configuration files. The reason I am applying option 66 to the LAN as well as VoIP VLAN is because a factory reset phone will not know the VoIP VLAN, it will get DHCP from the LAN. Then it will download its configuration file, which will give it its correct VLAN.
 
 
-1. SSH into USG using device username and password (found in Unifi Controller > Settings > Site)
+1 SSH into USG using device username and password (found in Unifi Controller > Settings > Site)
 
 ```
 configure
@@ -19,8 +19,7 @@ commit;save;exit
 
 mca-ctrl -t dump-cfg 
 ```
-
-2. Copy this section of that output:
+2 Copy this section of that output:
 
 ```
 {
@@ -70,7 +69,7 @@ mca-ctrl -t dump-cfg
 }
 ```
 
-3. SSH into Unifi Controller
+3 SSH into Unifi Controller
 
 ```
 cd /usr/lib/unifi/data/sites/<site-name>
