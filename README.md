@@ -6,37 +6,62 @@ SSH into USG using device username and password (found in Unifi Controller > Set
 
 ```configure```
 Use show command to find out your shared-network-name
-```show
+```
+show
 set service dhcp-server shared-network-name VoIP_10.1.1.0-24 subnet 10.1.1.0/24 tftp-server-name http://cloudpbx.locklinnetworks.com
+set service dhcp-server shared-network-name LAN_192.168.1.0-24 subnet 192.168.1.0/24 tftp-server-name http://cloudpbx.locklinnetworks.com
 commit;save;exit
 
 mca-ctrl -t dump-cfg 
 ```
+
+Copy this section of that output:
+
 ```
 {
-	"service": {
-		"dhcp-server": {
-            "VoIP_10.1.1.0-24": {
-                    "authoritative": "enable",
-                    "description": "vlan20",
-                    "subnet": {
-                            "10.1.1.0/24": {
-                                    "default-router": "10.1.1.1",
-                                    "dns-server": [
-                                            "10.1.1.1"
-                                    ],
-                                    "lease": "86400",
-                                    "start": {
-                                            "10.1.1.6": {
-                                                    "stop": "10.1.1.254"
-                                            }
-                                    },
-                                    "tftp-server-name": "http://cloudpbx.locklinnetworks.com/xml/locklin"
-                            		}
-                    			}
-            			}
-    			}
-		}
+"service": {
+        "dhcp-server": {
+                "shared-network-name": {
+                        "LAN_192.168.1.0-24": {
+                                "authoritative": "enable",
+                                "description": "vlan1",
+                                "subnet": {
+                                        "192.168.1.0/24": {
+                                                "default-router": "192.168.1.1",
+                                                "dns-server": [
+                                                        "192.168.1.1"
+                                                ],
+                                                "lease": "86400",
+                                                "start": {
+                                                        "192.168.1.6": {
+                                                                "stop": "192.168.1.254"
+                                                        }
+                                                },
+                                                "tftp-server-name": "http://cloudpbx.locklinnetworks.com"
+                                        }
+                                }
+                        },
+                        "VoIP_10.1.1.0-24": {
+                                "authoritative": "enable",
+                                "description": "vlan20",
+                                "subnet": {
+                                        "10.1.1.0/24": {
+                                                "default-router": "10.1.1.1",
+                                                "dns-server": [
+                                                        "10.1.1.1"
+                                                ],
+                                                "lease": "86400",
+                                                "start": {
+                                                        "10.1.1.6": {
+                                                                "stop": "10.1.1.254"
+                                                        }
+                                                },
+                                                "tftp-server-name": "http://cloudpbx.locklinnetworks.com/xml/locklin"
+                                        }
+                                }
+                        }
+                },
+        },
 }
 ```
 
