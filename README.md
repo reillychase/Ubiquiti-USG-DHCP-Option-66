@@ -13,8 +13,8 @@ configure
 Use show command to find out your shared-network-name
 ```
 show
-set service dhcp-server shared-network-name VoIP_10.1.1.0-24 subnet 10.1.1.0/24 tftp-server-name http://cloudpbx.locklinnetworks.com
-set service dhcp-server shared-network-name LAN_192.168.1.0-24 subnet 192.168.1.0/24 tftp-server-name http://cloudpbx.locklinnetworks.com
+set service dhcp-server shared-network-name VoIP_10.1.1.0-24 subnet 10.1.1.0/24 tftp-server-name http://cloudpbx.locklinnetworks.com/xml/locklin
+set service dhcp-server shared-network-name LAN_192.168.1.0-24 subnet 192.168.1.0/24 tftp-server-name http://cloudpbx.locklinnetworks.com/xml/locklin
 commit;save;exit
 
 mca-ctrl -t dump-cfg 
@@ -42,7 +42,7 @@ mca-ctrl -t dump-cfg
                                                                 "stop": "192.168.1.254"
                                                         }
                                                 },
-                                                "tftp-server-name": "http://cloudpbx.locklinnetworks.com"
+                                                "tftp-server-name": "http://cloudpbx.locklinnetworks.com/xml/locklin"
                                         }
                                 }
                         },
