@@ -2,7 +2,7 @@
 How to add DHCP option 66 to Ubiquiti USG
 
 
-NOTE: In this example I am configuring Option 66 for 2 different VLANs aka LAN and VoIP. Option 66 will point to the DNS name of the PBX where the phones will download their configuration files. The reason I am applying option 66 to the LAN as well as VoIP VLAN is because a factory reset phone will not know the VoIP VLAN, it will get DHCP from the LAN. Then it will download its configuration file, which will give it its correct VLAN.
+<b>NOTE:</b> In this example I am configuring Option 66 for 2 different VLANs aka LAN and VoIP. Option 66 will point to the DNS name of the PBX where the phones will download their configuration files. The reason I am applying option 66 to the LAN as well as VoIP VLAN is because a factory reset phone will not know the VoIP VLAN, it will get DHCP from the LAN. Then it will download its configuration file, which will give it its correct VLAN.
 
 
 SSH into USG using device username and password (found in Unifi Controller > Settings > Site)
