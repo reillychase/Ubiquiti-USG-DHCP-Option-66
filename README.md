@@ -39,10 +39,15 @@ mca-ctrl -t dump-cfg
 		}
 }
 ```
+
 SSH into Unifi Controller
-```cd /usr/lib/unifi/data/sites/<site-name>```
+
+``` cd /usr/lib/unifi/data/sites/<site-name> ```
+
 You can find the site name by looking at the URL of the Unifi Controller webpage for the site
+
 ```nano config.gateway.json```
+
 <Paste in the config extracted from the USG>
 Save
 
