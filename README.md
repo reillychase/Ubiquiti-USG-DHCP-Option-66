@@ -48,6 +48,6 @@ You can find the site name by looking at the URL of the Unifi Controller webpage
 
 ```nano config.gateway.json```
 
-<Paste in the config extracted from the USG>
+\<Paste in the config extracted from the USG\>
 Save
 
