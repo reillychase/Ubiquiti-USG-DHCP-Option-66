@@ -4,7 +4,9 @@ How to add DHCP option 66 to Ubiquiti USG
 
 SSH into USG using device username and password (found in Unifi Controller > Settings > Site)
 
-```configure```
+```
+configure
+```
 Use show command to find out your shared-network-name
 ```
 show
