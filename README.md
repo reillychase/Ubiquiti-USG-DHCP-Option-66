@@ -41,7 +41,7 @@ mca-ctrl -t dump-cfg
                                                                 "stop": "192.168.1.254"
                                                         }
                                                 },
-                                                "tftp-server-name": "http://cloudpbx.locklinnetworks.com/xml/locklin"
+                                                "tftp-server-name": "http://cloudpbx.yoursite.com/app/provision"
                                         }
                                 }
                         },
@@ -60,7 +60,7 @@ mca-ctrl -t dump-cfg
                                                                 "stop": "10.1.1.254"
                                                         }
                                                 },
-                                                "tftp-server-name": "http://cloudpbx.locklinnetworks.com/xml/locklin"
+                                                "tftp-server-name": "http://cloudpbx.yoursite.com/app/provision"
                                         }
                                 }
                         }
