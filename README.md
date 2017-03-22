@@ -69,6 +69,7 @@ mca-ctrl -t dump-cfg
 }
 }
 ```
+NOTE: For FusionPBX use "http://cloudpbx.yoursite.com/app/provision/?mac=$MA" for Cisco SPA phones, or use "http://cloudpbx.yoursite.com/app/provision/" for Yealink phones
 
 3 SSH into Unifi Controller
 
