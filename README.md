@@ -31,16 +31,6 @@ mca-ctrl -t dump-cfg
                                 "description": "vlan1",
                                 "subnet": {
                                         "192.168.1.0/24": {
-                                                "default-router": "192.168.1.1",
-                                                "dns-server": [
-                                                        "192.168.1.1"
-                                                ],
-                                                "lease": "86400",
-                                                "start": {
-                                                        "192.168.1.6": {
-                                                                "stop": "192.168.1.254"
-                                                        }
-                                                },
                                                 "tftp-server-name": "http://cloudpbx.yoursite.com/app/provision/?mac=$MA"
                                         }
                                 }
@@ -50,16 +40,6 @@ mca-ctrl -t dump-cfg
                                 "description": "vlan20",
                                 "subnet": {
                                         "10.1.1.0/24": {
-                                                "default-router": "10.1.1.1",
-                                                "dns-server": [
-                                                        "10.1.1.1"
-                                                ],
-                                                "lease": "86400",
-                                                "start": {
-                                                        "10.1.1.6": {
-                                                                "stop": "10.1.1.254"
-                                                        }
-                                                },
                                                 "tftp-server-name": "http://cloudpbx.yoursite.com/app/provision/?mac=$MA"
                                         }
                                 }
