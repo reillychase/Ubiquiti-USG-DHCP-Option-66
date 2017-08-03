@@ -27,8 +27,6 @@ mca-ctrl -t dump-cfg
         "dhcp-server": {
                 "shared-network-name": {
                         "LAN_192.168.1.0-24": {
-                                "authoritative": "enable",
-                                "description": "vlan1",
                                 "subnet": {
                                         "192.168.1.0/24": {
                                                 "tftp-server-name": "http://cloudpbx.yoursite.com/app/provision/?mac=$MA"
@@ -36,8 +34,6 @@ mca-ctrl -t dump-cfg
                                 }
                         },
                         "VoIP_10.1.1.0-24": {
-                                "authoritative": "enable",
-                                "description": "vlan20",
                                 "subnet": {
                                         "10.1.1.0/24": {
                                                 "tftp-server-name": "http://cloudpbx.yoursite.com/app/provision/?mac=$MA"
