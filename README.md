@@ -1,3 +1,5 @@
+# UPDATE 5/14/2018 - It looks like Ubiquiti has added the ability to configure DHCP option from UniFi on the latest version! Under Settings > Services > DHCP, you can enable option 150 which should work for most VoIP phones
+
 # Ubiquiti-USG-DHCP-Option-66
 How to add DHCP option 66 to Ubiquiti USG
 
